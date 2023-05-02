@@ -23,8 +23,7 @@ echo "---------------------------------------------------------------"
 
 echo "欢迎使用小米路由Misstar Tools工具箱"
 echo "当前版本：2.17.05.21"
-echo "此版本为MT2.0终结版，由honglt分流"
-echo "问题反馈&技术交流QQ：199789"
+echo "此版本为MT2.0终结版，由cuberwu分流"
 
 ## Check The Router Hardware Model 
 model=$(cat /proc/xiaoqiang/model)
@@ -98,7 +97,7 @@ fi
 
 echo "开始下载安装包..."
 
-url="https://raw.githubusercontent.com/honglt1/Misstar-Tools/master/appstore/$model"
+url="https://raw.githubusercontent.com/cuberwu/Misstar-Tools/master/appstore/$model"
 
 curl -kL ${url}/misstar.mt -o /tmp/misstar.mt 
 
@@ -153,7 +152,7 @@ echo 'fi #misstar' >> /etc/firewall.user
 
 if [ $? -eq 0 ];then
     snmd5=$(echo `nvram get wl1_maclist` `nvram get SN`  | md5sum | awk '{print $1}')
-    counter=`curl "https://raw.githubusercontent.com/honglt1/Misstar-Tools/master/counter.php?sha1sum=$snmd5" -s | awk -F "\"" '{print $4}'`
+    counter=`curl "https://raw.githubusercontent.com/cuberwu/Misstar-Tools/master/counter.php?sha1sum=$snmd5" -s | awk -F "\"" '{print $4}'`
     uci set misstar.misstar.counter=$counter
     uci commit misstar
     echo -e "安装完成，请刷新网页。"

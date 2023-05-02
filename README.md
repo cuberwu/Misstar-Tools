@@ -7,10 +7,5 @@
 2017新版，MT工具箱2.0
 安装：
 wget http://www.misstar.com/tools/appstore/install.sh -O /tmp/install.sh && chmod +x /tmp/install.sh && /tmp/install.sh
-复制代码
-（已安装的1.1.0或者1.3.0可以网页里面直接点升级，但是版本升级会丢失配置信息，如有重要数据请做好备份）
-卸载：也可直接在管理页面卸载
-wget http://www.misstar.com/tools/uninstall.sh -O /tmp/uninstall.sh && chmod +x /tmp/uninstall.sh && /tmp/uninstall.sh
-复制代码
 
 (注意:此插件仅适用于R1D,R2D,R3)
